@@ -6,25 +6,34 @@ int i = 0;
 // Note the return type: void*
 void* incrementingThreadFunction(){
     // TODO: increment i 1_000_000 times
-for (int c=0;c<=1000000;c+=1){
-i++;
+    for(int i;i<=1000000;i++){
+	i++
 }
- return NULL;
-}
-
-void* decrementingThreadFunction(){
-for (int j=0;j<=1000000;j++){
-i++;
-}   
- // TODO: decrement i 1_000_000 times
     return NULL;
 }
 
+void* decrementingThreadFunction(){
+    // TODO: decrement i 1_000_000 times
+ for(int i;i<=1000000;i++){
+        i--
+}
+    
+return NULL;
+}
+
+
+
+int func(int integer) {
+ return integer
+}
 
 int main(){
     // TODO: declare incrementingThread and decrementingThread (hint: google pthread_create)
+    
     pthread_t incrementingThread;
-    pthread_t decrementingThread;
+    pthread decrementingThread;
+
+
     pthread_create(&incrementingThread, NULL, incrementingThreadFunction, NULL);
     pthread_create(&decrementingThread, NULL, decrementingThreadFunction, NULL);
     
